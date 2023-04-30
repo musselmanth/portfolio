@@ -1,0 +1,204 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 20px);
+  padding: 15px 10px;
+  background-color: #222222;
+  z-index: 2;
+}
+
+.navbar a {
+  color: #CCCCCC;
+  text-decoration: none;
+}
+
+.nav-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  flex-grow: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.pic-and-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+}
+
+.pic-and-title:hover {
+  color: #FFFFFF;
+}
+
+.headshot {
+  height: 90px;
+  width: 90px;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin: 0 0 0 20px;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 1.5rem;
+  font-weight:bold;
+}
+
+.menu-btn {
+  display: none;
+  width: 45px;
+  height: 19px;
+  background-color: #444444;
+  border-radius: 8px;
+  cursor: pointer;
+  padding-top: 13px;
+  padding-bottom: 13px;  
+}
+
+.menu-btn:hover {
+  background-color: #555555;
+}
+
+.menu-line {
+  width: 28px;
+  height: 3px;
+  background: #CCCCCC;
+  margin: 0 auto 5px auto;
+  transition: all 0.2s ease-out;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+
+.menu-btn.close .menu-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.close .menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .menu-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.nav-2 {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 5;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+  background-color: #222222;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 5;
+  transition: 0.4s;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 20px 0 0;
+}
+
+.nav-container a {
+  text-decoration: none;
+}
+
+.red-top {
+  background: linear-gradient(to top, #ad4444 calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 100% 200%;
+}
+
+.yellow-top {
+  background: linear-gradient(to top, #c7b24d calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 100% 200%;
+}
+
+.green-top {
+  background: linear-gradient(to top, #3e933f calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 100% 200%;
+}
+
+.blue-top {
+  background: linear-gradient(to top, #4447ad calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 100% 200%;
+}
+
+.red-rgt {
+  background: linear-gradient(to right, #ad4444 calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 200% 100%;
+}
+
+.yellow-rgt {
+  background: linear-gradient(to right, #c7b24d calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 200% 100%;
+}
+
+.green-rgt {
+  background: linear-gradient(to right, #3e933f calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 200% 100%;
+}
+
+.blue-rgt {
+  background: linear-gradient(to right, #4447ad calc(50% + 4px), transparent calc(50% - 4px));
+  background-size: 200% 100%;
+}
+
+.nav-btn {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.6rem 1.5rem 0.5rem 1.5rem;
+  background-position: right top;
+  transition: background .2s ease-out;
+  margin: 0 0 0 4px;
+}
+
+.nav-btn:hover {
+  color: #FFFFFF;
+  background-position: left bottom;
+}
+
+.nav-btn.active {
+  color: #FFFFFF;
+  background-position: left bottom;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.social-btn {
+  width: 35px;
+  padding: 5px;
+}
+
+.social-btn svg {
+  fill: #CCCCCC;
+}
+
+.social-btn svg:hover {
+  fill: #FFFFFF;
+}
+
+
