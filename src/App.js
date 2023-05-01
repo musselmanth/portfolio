@@ -1,10 +1,10 @@
 import './App.css';
 import NavBar from './NavBar.js';
-import Home from './Home.js';
-import Blog from './Blog.js'
+import Home from './pages/about/AboutPage.js';
+import Blog from './pages/blog/BlogPage.js'
 import { Routes, Route} from 'react-router-dom';
-import Portfolio from './Portfolio';
-import Resume from './Resume';
+import Portfolio from './pages/portfolio/PortfolioPage';
+import Resume from './pages/resume/ResumePage';
 
 const App = () => {
   return (

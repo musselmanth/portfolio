@@ -1,6 +1,6 @@
-import './Home.css';
+import './AboutPage.css';
 
-const Home = (props) => {
+const AboutPage = (props) => {
   return (
     <div className="page-content">
       <h1>Home</h1>
@@ -8,4 +8,4 @@ const Home = (props) => {
   )
 }
 
-export default Home;
+export default AboutPage

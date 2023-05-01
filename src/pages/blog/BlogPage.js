@@ -1,6 +1,6 @@
-import './Blog.css';
+import './BlogPage.css';
 
-const Blog = (props) => {
+const BlogPage = (props) => {
   return (
     <div className="page-content">
       <h1>Blog</h1>
@@ -8,4 +8,4 @@ const Blog = (props) => {
   )
 }
 
-export default Blog;
+export default BlogPage

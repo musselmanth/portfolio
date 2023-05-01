@@ -1,6 +1,6 @@
-import './Resume.css';
+import './ResumePage.css';
 
-const Resume = (props) => {
+const ResumePage = (props) => {
   return (
     <div className="page-content">
       <h1>Resume</h1>
@@ -8,4 +8,4 @@ const Resume = (props) => {
   )
 }
 
-export default Resume;
+export default ResumePage;
