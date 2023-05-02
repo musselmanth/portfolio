@@ -7,6 +7,7 @@ import Portfolio from './pages/portfolio/PortfolioPage';
 import Resume from './pages/resume/ResumePage';
 import useWindowResizeThreshold from './hooks/useWindowResizeThreshold';
 import useWindowScrolled from './hooks/useWindowScrolled';
+import Footer from './Footer/Footer';
 
 const MAX_MOBILE_WIDTH = 890;
 const SCROLLED_AMT = 80
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/resume" element={ <Resume /> }/>
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

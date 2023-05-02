@@ -1,11 +1,17 @@
 body {
   margin: 0;
+}
+
+#root {
   font-family: 'Lexend', sans-serif;
   color: #DDDDDD;
   background-color: #222222;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
-body a {
+#root a {
   color: #DDDDDD
 }
 
@@ -14,7 +20,7 @@ body a {
   margin-top: 115px;
   background-color: #333333;
   z-index: 0;
-  min-height: calc(100dvh - 145px);
+  flex-grow: 5;
 }
 
 .page-content.sm-margin {

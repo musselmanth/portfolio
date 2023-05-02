@@ -1,0 +1,14 @@
+.footer {
+  background-color: #222222;
+  padding: 15px 15px;
+}
+
+.footer-content {
+  font-size: 0.8rem;
+}
+
+.footer-content a {
+  color: #CCCCCC;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
