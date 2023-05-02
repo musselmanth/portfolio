@@ -1,7 +1,7 @@
 import './PortfolioPage.css';
 import projectsList from './projectsData'
 
-const IMAGE_URL_PREFIX = "https://www.tommusselman.com/portfolio/images/"
+const IMAGE_URL_PREFIX = "/static/media/"
 
 const PortfolioPage = (props) => {
   console.log(projectsList)
