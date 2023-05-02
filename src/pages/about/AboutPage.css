@@ -1,4 +1,55 @@
-.home {
-  margin: 155px 20px 0 20px;
-  color: white;
+.about-me {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.summary {
+  width: 45%;
+  flex: 1 1 300px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills {
+  width: 55%;
+  margin-bottom: 2rem;
+  flex: 1 1 350px;
+}
+
+.skill-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-left: -8px;
+  margin-top: 8px;
+  margin-bottom: 1rem;
+}
+
+.skill-item {
+  background-color: #CCCCCC;
+  color: #111111;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin: 8px;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skill-item svg {
+  fill: #333333;
+  margin-right: 6px;
+  height: 1.5rem;
+}
+
+.skill-item:hover {
+  background-color: #FFFFFF;
 }
