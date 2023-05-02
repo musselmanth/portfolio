@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.filter-button {
+  cursor: pointer;
+}
+
 .project {
   width: calc(100%-3rem);
   background-color: #444444;
