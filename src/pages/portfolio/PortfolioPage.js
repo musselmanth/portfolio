@@ -1,7 +1,7 @@
 import './PortfolioPage.css';
 import projectsList from './projectsData'
 
-const IMAGE_URL_PREFIX = "/static/media/"
+const IMAGE_URL_PREFIX = "/images/"
 
 const PortfolioPage = (props) => {
   console.log(projectsList)
