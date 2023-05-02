@@ -8,6 +8,7 @@ import Resume from './pages/resume/ResumePage';
 import useWindowResizeThreshold from './hooks/useWindowResizeThreshold';
 import useWindowScrolled from './hooks/useWindowScrolled';
 import Footer from './Footer/Footer';
+import NotFound from './NotFound'
 
 const MAX_MOBILE_WIDTH = 890;
 const SCROLLED_AMT = 80
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/blog" element={ <Blog /> }/>
           <Route path="/portfolio" element={ <Portfolio /> }/>
           <Route path="/resume" element={ <Resume /> }/>
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
