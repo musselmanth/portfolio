@@ -10,7 +10,6 @@ body a {
 }
 
 .page-content {
-  display: flex;
   padding: 15px 1.5rem;
   margin-top: 115px;
   background-color: #333333;
@@ -20,7 +19,7 @@ body a {
 
 .page-content.sm-margin {
   margin-top: 50px;
-  height: calc(100dvh - 80px);
+  min-height: calc(100dvh - 80px);
 }
 
 .footer {
