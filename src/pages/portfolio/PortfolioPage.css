@@ -2,10 +2,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
-.filter-button {
-  cursor: pointer;
+.filter-box {
+  background-color: #444444;
+  padding: 1rem 1.5rem;
 }
 
 .project {
@@ -73,8 +75,9 @@
   flex: 1 1 300px;
 }
 
-.proj-screenshot {
-  width: 98%;
+img.proj-screenshot {
+  max-width: 98%;
+  max-height: 400px;
 }
 
 .tech-stack {
@@ -109,6 +112,24 @@
   height: 1.5rem;
 }
 
-.tech-stack-item:hover {
+.filter-button {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.filter-button svg {
+  height: 1rem;
+}
+
+.filter-button img {
+  height: 1rem;
+  margin-left: 6px;
+}
+
+.filter-button:hover {
   background-color: #FFFFFF;
+}
+
+.filter-list-inactive {
+  padding-bottom: 10px;
 }

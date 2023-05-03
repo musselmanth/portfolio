@@ -1,9 +1,16 @@
 import { useState } from 'react';
 import './PortfolioPage.css';
 import projectsList from './projectsData'
+import { useEffect } from 'react';
+import closeIcon from '../../assets/close.svg'
 
-const IMAGE_URL_PREFIX = "/images/"
+const IMAGE_URL_PREFIX = "https://www.tommusselman.com/images/"
 
+const sortFilters = (filters) => {
+  return filters
+    .sort(([a,],[b,]) => b < a ? 1 : -1)
+    .sort(([,a],[,b]) => b.count - a.count)
+}
 
 const getInitialFilters = () => {
   const allTechs = projectsList.flatMap(project => {
@@ -17,15 +24,23 @@ const getInitialFilters = () => {
       initialFilters[tech.name].count++
     }
   })
-  const sortable = Object.entries(initialFilters)
-    .sort(([,a],[,b]) => b.count - a.count)
-  return sortable
+  return sortFilters(Object.entries(initialFilters))
 }
 
 const PortfolioPage = (props) => {
   const [projects, setProjects] = useState(projectsList)
   const [inactiveFilterList, setInactiveFilterList] = useState(getInitialFilters)
   const [activeFilterList, setActiveFilterList] = useState([])
+
+  useEffect(()=> {
+    setProjects(projectsList.filter(project => {
+        const filterNames = activeFilterList.map(filter => filter[0])
+        const projTechNames = project.techStack.map(tech => tech.name)
+        return filterNames.every(filterName => projTechNames.includes(filterName))
+      })
+    )
+
+  }, [activeFilterList])
 
   const addFilter = (filter) => {
     setActiveFilterList(currentActiveFilterList => {
@@ -34,40 +49,44 @@ const PortfolioPage = (props) => {
     setInactiveFilterList(currentInactiveFilterList => {
       return currentInactiveFilterList.filter(inactiveFilter => filter[0] !== inactiveFilter[0])
     })
-    //TODO: filter projects by new active filter list
   }
 
   const removeFilter = (filter) => {
-    //Todo: remove active filter and add back to inactive filter list. re-filter projects by new activefilter list.
-    //TODO: Add an X to the active filter buttons
+    setActiveFilterList(currentActiveFilterList => {
+      return currentActiveFilterList.filter(activeFilter => filter[0] !== activeFilter[0])
+    })
+    setInactiveFilterList(currentInactiveFilterList => {
+      console.log(sortFilters([...currentInactiveFilterList, filter]))
+      return sortFilters([...currentInactiveFilterList, filter])
+    })
   }
 
   return (
     <>
       <h1>Portfolio</h1>
       <p>Here's a full list of software projects I've done, ordered by most recent to oldest.</p>
-      <div className="filterBox">
-        <p>Filter by Tech:</p>
+      <div className="filter-box">
+        Filter by Tech:
         <ul className="filter-list-inactive tech-stack">
           {inactiveFilterList.map(([name, value], i) => {
-            if (!value.svg) value.svg = ""
             return (
               <li className="tech-stack-item filter-button" key={`inactive-filter-${i}`} onClick={() => addFilter([name, value])} dangerouslySetInnerHTML={{__html: value.svg + name}}></li>
             )
           })}
         </ul>
-        {activeFilterList.length > 0 && <p>Remove Filters:</p>}
+        {activeFilterList.length > 0 && "Remove Filters:"}
         <ul className="filter-list-active tech-stack">
           {
             activeFilterList.map(([name, value], i) => {
               return (
-                <li className="tech-stack-item filter-button" key={`active-filter-${i}`} onClick={() => removeFilter([name, value])} dangerouslySetInnerHTML={{__html: value.svg + name}}></li>
+                <li className="tech-stack-item filter-button" key={`active-filter-${i}`} onClick={() => removeFilter([name, value])}><span dangerouslySetInnerHTML={{__html: value.svg}}></span>{name}<img src={closeIcon} /></li>
               )
             })
           }
         </ul>
       </div>
       <div className="projects-list">
+        { projects.length === 0 && <h2>No projects match your filters.</h2>}
         { projects.map((project, i) => {
           return (
             <div className="project" key={`proj-${i}`}>

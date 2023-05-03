@@ -11,7 +11,7 @@ import Footer from './Footer/Footer';
 import NotFound from './NotFound'
 
 const MAX_MOBILE_WIDTH = 890;
-const SCROLLED_AMT = 80
+const SCROLLED_AMT = 120
 
 const App = () => {
   const isMobileSize = useWindowResizeThreshold(MAX_MOBILE_WIDTH)
