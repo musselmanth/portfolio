@@ -15,19 +15,17 @@ const BlogPage = (props) => {
         { serverError && <h3 style={{textAlign: "center"}}>There was an error retrieving the posts.</h3> }
         { apiData !== null && apiData.map((post, i) => {
           return (
-            <div className="post" key={`post-${i}`} >
-              <a className="post-card" href={post.url}>
-                <img src={post.social_image} className="post-image" />
-                <div className="post-body">
-                  <h3 className="post-title">{post.title}</h3>
-                  <p className="post-description">{post.description}</p>
-                  <div className="post-bottom">
-                    <div className="post-date">{new Date(post.published_at).toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric"})}</div>
-                    <div className="post-comments">Comments: {post.comments_count}</div>
-                  </div>
+            <a className="post" href={post.url} key={`post-${i}`}>
+              <img src={post.social_image} className="post-image" />
+              <div className="post-body">
+                <h3 className="post-title">{post.title}</h3>
+                <p className="post-description">{post.description}</p>
+                <div className="post-bottom">
+                  <div className="post-date">{new Date(post.published_at).toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric"})}</div>
+                  <div className="post-comments">Comments: {post.comments_count}</div>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
           )
         })}
 
