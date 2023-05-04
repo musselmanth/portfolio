@@ -9,6 +9,7 @@ const BlogPage = (props) => {
   return (
     <>
       <h1>Blog</h1>
+      <p>All of my blog posts are published on my <a href="https://www.dev.to/musselmanth">dev.to</a>. I like to write about what I'm learning and how I solved interesting problems.</p><br/>
       <div className="posts-container">
         { isLoading && <h3 style={{textAlign: "center"}}>Loading...</h3>}
         { serverError && <h3 style={{textAlign: "center"}}>There was an error retrieving the posts.</h3> }
