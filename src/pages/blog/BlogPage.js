@@ -18,7 +18,17 @@ const BlogPage = (props) => {
             <a className="post" href={post.url} key={`post-${i}`}>
               <img src={post.social_image} className="post-image" />
               <div className="post-body">
-                <h3 className="post-title">{post.title}</h3>
+                <h2 className="post-title">{post.title}</h2>
+                  <div className="tags-container">
+                    <div className="post-tags-label">Tags:</div>
+                    <ul className="post-tags-list">
+                      {post.tag_list.map((tag, i) => {
+                        return (
+                          <li className="post-tag" key={`post-tag-${i}`}>#{tag}</li>
+                        )
+                      })}
+                    </ul>
+                  </div>
                 <p className="post-description">{post.description}</p>
                 <div className="post-bottom">
                   <div className="post-date">{new Date(post.published_at).toLocaleDateString('en-us', { year:"numeric", month:"short", day:"numeric"})}</div>

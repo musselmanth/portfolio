@@ -178,7 +178,8 @@
 .nav-btn {
   text-align: center;
   font-size: 1.3rem;
-  padding: 1rem 0.8rem 1rem 0.8rem;
+  padding: 0.9rem 0.8rem 0.9rem 0.8rem;
+  border-radius: 4px;
   background-position: right top;
   transition: background .2s ease-out;
   margin: 0 0 0 4px;

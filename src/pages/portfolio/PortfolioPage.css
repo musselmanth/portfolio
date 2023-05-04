@@ -8,6 +8,7 @@
 .filter-box {
   background-color: #444444;
   padding: 1rem 1.5rem;
+  border-radius: 10px;
 }
 
 .project {
@@ -17,6 +18,7 @@
   flex-direction: column;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  border-radius: 10px;
 }
 
 .row1 {
@@ -100,7 +102,7 @@ img.proj-screenshot {
   padding-bottom: 0.25rem;
   margin-right: 8px;
   margin-bottom: 8px;
-  border-radius: 40px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;

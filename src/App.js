@@ -20,12 +20,12 @@ const App = () => {
   return (
     <>
       <NavBar isMobileSize={isMobileSize} isScrolled={isScrolled}/>
-      <div className={`page-content ${(isMobileSize || isScrolled) && "sm-margin"}`}>
+      <div className={`page-content ${(isMobileSize) && "sm-margin"}`}>
         <Routes>
           <Route path="/" element={ <Home /> }/>
           <Route path="/blog" element={ <Blog /> }/>
           <Route path="/portfolio" element={ <Portfolio /> }/>
-          <Route path="/resume" element={ <Resume /> }/>
+          <Route path="/resume" element={ <Resume isMobileSize={isMobileSize}/> }/>
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

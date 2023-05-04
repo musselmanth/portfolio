@@ -25,7 +25,7 @@ body {
 
 .page-content.sm-margin {
   margin-top: 50px;
-  min-height: calc(100dvh - 80px);
+  /* min-height: calc(100dvh - 80px); */
 }
 
 .footer {

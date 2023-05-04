@@ -4,6 +4,10 @@
   height: calc(100dvh - 320px);
 }
 
+.pdf-viewer.large{
+  height: calc(100dvh - 275px)
+}
+
 #title {
   color: red;
 }
