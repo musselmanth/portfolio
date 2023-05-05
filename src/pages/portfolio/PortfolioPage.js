@@ -111,7 +111,7 @@ const PortfolioPage = (props) => {
                 { project.sample.type === "image" && <img src={IMAGE_URL_PREFIX + project.sample.src} className="proj-screenshot" />}
               </div>
             </div>
-            <h4>Tech Stack</h4>
+            <h3>Tech Used:</h3>
             <ul className="tech-stack">
               { project.techStack.map((tech, j) => {
                 return (
