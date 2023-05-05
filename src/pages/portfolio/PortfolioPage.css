@@ -40,7 +40,6 @@
 }
 
 .filter-toggle-btn {
-
   transform: rotate(180deg);
   transition: all 0.3s ease-out;
 }
@@ -150,7 +149,7 @@ img.proj-screenshot {
   padding-bottom: 0.25rem;
   margin-right: 8px;
   margin-bottom: 8px;
-  border-radius: 5px;
+  border-radius: 3px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -182,4 +181,12 @@ img.proj-screenshot {
 
 .filter-list-inactive {
   padding-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .filter-button {
+    padding: 3px 6px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
 }
