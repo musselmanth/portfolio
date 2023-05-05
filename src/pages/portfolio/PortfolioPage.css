@@ -101,17 +101,19 @@
   margin-right: 8px;
   margin-bottom: 8px;
   padding: 4px;
-  border-bottom: 2px solid #c7b24d;
-  background: linear-gradient(to top, #c7b24d 50%, transparent 50%);
+  border-bottom: 2px solid #a84dc7;
+  background: linear-gradient(to top, #a84dc7 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: top left;
-  transition: background .2s ease-out;
+  transition: all .25s ease-out;
 }
 
 .link:hover {
-  color: #FFFFFF;
   background-position: bottom left;
+  filter: brightness(120%)
 }
+
+
 
 .screen {
   width: 55%;
