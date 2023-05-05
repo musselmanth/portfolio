@@ -11,9 +11,11 @@ const AboutPage = (props) => {
 
           <h3>I'm a former hobbyist who made the move to pursue a career in software engineering full time. My former career was in financial services.</h3>
 
-          <h3>Please take a look at my portfolio, or reach out:</h3>
-          <a href="mailto:tmusselman@gmail.com">tmusselman@gmail.com</a><br />
-          <a href="https://www.linkedin.com/in/tmussel">LinkedIn</a>
+          <h3>Please feel free to contact me:</h3>
+          <div className="contact-container">
+            <a href="mailto:tmusselman@gmail.com"><div className="contact-btn">Email</div></a><br />
+            <a href="https://www.linkedin.com/in/tmussel"><div className="contact-btn">LinkedIn</div></a>
+          </div>
         </div>
         <div className="skills">
           <h1>Skills</h1>

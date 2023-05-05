@@ -53,3 +53,30 @@
 .skill-item:hover {
   background-color: #FFFFFF;
 }
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-container a {
+  text-decoration: none;
+}
+
+.contact-btn {
+  padding: 8px 20px;
+  margin-right: 6px;
+  border-radius: 3px;
+  border-bottom: 2px solid #904dc7;
+  background: linear-gradient(to top, #904dc7 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top left;
+  transition: background .2s ease-out;
+  font-size: 1.5rem;
+}
+
+.contact-btn:hover {
+  color: #FFFFFF;
+  background-position: bottom left;
+}

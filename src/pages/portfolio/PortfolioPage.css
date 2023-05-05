@@ -9,6 +9,41 @@
   background-color: #444444;
   padding: 1rem 1.5rem;
   border-radius: 10px;
+  transition: all 0.3s ease-out;
+  max-height: 28px;
+  overflow: hidden;
+}
+
+.filter-box.visible {
+  max-height: 600px;
+}
+
+.filter-box-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter-text {
+  font-size: 1.2rem;
+}
+
+.filter-toggle-btn {
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: all 0.3s ease-out;
+}
+
+.filter-toggle-btn.open {
+  transform: rotate(360deg);
+}
+
+.filter-toggle-btn svg {
+  width: 25px;
+  height: 25px;
+  fill: #CCCCCC;
 }
 
 .project {
