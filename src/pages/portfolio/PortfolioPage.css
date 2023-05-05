@@ -9,27 +9,34 @@
   background-color: #444444;
   padding: 0 1.5rem 12px;
   border-radius: 10px;
-  transition: all 0.5s ease-out;
+  transition: all 0.25s ease-out;
   max-height: 45px;
   overflow: hidden;
 }
 
 .filter-box.visible {
-  max-height: 375px;
+  max-height: 360px;
 }
 
 .filter-box-top {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-bottom: 15px;
   padding-top: 15px;
   cursor: pointer;
 }
 
+.filter-count {
+  color: #f8b4b4;
+  font-weight:100;
+  margin-right: 15px;
+}
+
 .filter-text {
   font-size: 1.2rem;
+  flex: 1;
 }
 
 .filter-toggle-btn {
