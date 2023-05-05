@@ -7,15 +7,15 @@
 
 .filter-box {
   background-color: #444444;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem 12px;
   border-radius: 10px;
-  transition: all 0.3s ease-out;
-  max-height: 28px;
+  transition: all 0.5s ease-out;
+  max-height: 45px;
   overflow: hidden;
 }
 
 .filter-box.visible {
-  max-height: 600px;
+  max-height: 500px;
 }
 
 .filter-box-top {
@@ -23,7 +23,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  cursor: pointer;
 }
 
 .filter-text {
@@ -31,7 +33,7 @@
 }
 
 .filter-toggle-btn {
-  cursor: pointer;
+
   transform: rotate(180deg);
   transition: all 0.3s ease-out;
 }
