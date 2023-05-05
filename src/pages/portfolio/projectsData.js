@@ -7,7 +7,7 @@ const projectsList = [
               "url": "https://re-sip-e.netlify.app/"
           },
           {
-              "text": "Deployed Back-end Graphiql Demo",
+              "text": "Deployed BE Graphiql Demo",
               "url": "https://re-sip-e-be.fly.dev/graphiql"
           },
           {
