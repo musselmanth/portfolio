@@ -100,10 +100,10 @@
   margin-right: 8px;
   margin-bottom: 8px;
   padding: 4px;
-  border-bottom: 2px solid #a84dc7;
-  background: linear-gradient(to top, #a84dc7 50%, transparent 50%);
+  background: linear-gradient(to top, #a84dc7 calc(50% + 4px), transparent calc(50% - 4px));
   background-size: 100% 200%;
   background-position: top left;
+  border-radius: 4px;
   transition: all .25s ease-out;
 }
 
