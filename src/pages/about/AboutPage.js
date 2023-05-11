@@ -7,9 +7,9 @@ const AboutPage = (props) => {
         <div className="summary">
           <h1>About Me</h1>
           <h2>👋 Hi I'm Tom! Thanks for stopping by!</h2>
-          <h3>I'm a software engineer specializing in Ruby on Rails and back-end development. I love front-end as well, and I'm looking for full-stack or back-end roles!</h3>
+          <h3>I'm a full-stack software engineer specializing in Ruby on Rails, JavaScript, and React.</h3>
 
-          <h3>I'm a former hobbyist who made the move to pursue a career in software engineering full time. I attended the <a href="https://www.turing.edu" target="_blank">Turing School for Software and Design</a> for a full-time 7-month back-end engineering certificate program. My former career was in financial services.</h3>
+          <h3>I'm a former hobbyist who made the move to pursue a career in software engineering full time. I attended the <a href="https://www.turing.edu" target="_blank">Turing School for Software and Design</a> for a full-time 7-month back-end engineering certificate program. Since graduating I have been expanding my front-end engineering skills. My former career was in financial services.</h3>
 
           <h3>Please feel free to contact me:</h3>
           <div className="contact-container">
