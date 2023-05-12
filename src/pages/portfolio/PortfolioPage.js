@@ -32,7 +32,7 @@ const PortfolioPage = (props) => {
   const [projects, setProjects] = useState(projectsList)
   const [inactiveFilterList, setInactiveFilterList] = useState(getInitialFilters)
   const [activeFilterList, setActiveFilterList] = useState([])
-  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(true)
+  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false)
 
   useEffect(()=> {
     setProjects(projectsList.filter(project => {
