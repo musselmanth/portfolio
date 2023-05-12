@@ -3,6 +3,7 @@ import './PortfolioPage.css';
 import projectsList from './projectsData'
 import { useEffect } from 'react';
 import closeIcon from '../../assets/close.svg'
+import Image from '../../components/Image'
 
 const IMAGE_URL_PREFIX = "https://www.tommusselman.com/images/"
 
@@ -31,7 +32,7 @@ const PortfolioPage = (props) => {
   const [projects, setProjects] = useState(projectsList)
   const [inactiveFilterList, setInactiveFilterList] = useState(getInitialFilters)
   const [activeFilterList, setActiveFilterList] = useState([])
-  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false)
+  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(true)
 
   useEffect(()=> {
     setProjects(projectsList.filter(project => {
@@ -67,7 +68,10 @@ const PortfolioPage = (props) => {
       <h1>Portfolio</h1>
       <p>This is a list of my most substantial projects, from most to least recent. You can find additional minor projects on my <a href="https://www.github.com/musselmanth" target="_blank">GitHub</a>.</p>
       <div className={`filter-box ${isFilterBoxOpen && "visible"}`}>
-        <div className="filter-box-top" onClick={() => setIsFilterBoxOpen(cur => !cur)}><div className="filter-text">Filter by Tech:</div><div className="filter-count">{activeFilterList.length > 0 && `${activeFilterList.length} filter${activeFilterList.length > 1 ? "s" : ""} active`}</div><div className={`filter-toggle-btn ${isFilterBoxOpen && "open"}`}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="512px" height="512px"><path d="M 24.96875 13 C 24.449219 13.007813 23.953125 13.21875 23.585938 13.585938 L 3.585938 33.585938 C 3.0625 34.085938 2.851563 34.832031 3.035156 35.535156 C 3.21875 36.234375 3.765625 36.78125 4.464844 36.964844 C 5.167969 37.148438 5.914063 36.9375 6.414063 36.414063 L 25 17.828125 L 43.585938 36.414063 C 44.085938 36.9375 44.832031 37.148438 45.535156 36.964844 C 46.234375 36.78125 46.78125 36.234375 46.964844 35.535156 C 47.148438 34.832031 46.9375 34.085938 46.414063 33.585938 L 26.414063 13.585938 C 26.03125 13.203125 25.511719 12.992188 24.96875 13 Z"/></svg></div></div>
+        <div className="filter-box-top" onClick={() => setIsFilterBoxOpen(cur => !cur)}>
+          <div className={`filter-toggle-btn ${isFilterBoxOpen && "open"}`}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="512px" height="512px"><path d="M 24.96875 13 C 24.449219 13.007813 23.953125 13.21875 23.585938 13.585938 L 3.585938 33.585938 C 3.0625 34.085938 2.851563 34.832031 3.035156 35.535156 C 3.21875 36.234375 3.765625 36.78125 4.464844 36.964844 C 5.167969 37.148438 5.914063 36.9375 6.414063 36.414063 L 25 17.828125 L 43.585938 36.414063 C 44.085938 36.9375 44.832031 37.148438 45.535156 36.964844 C 46.234375 36.78125 46.78125 36.234375 46.964844 35.535156 C 47.148438 34.832031 46.9375 34.085938 46.414063 33.585938 L 26.414063 13.585938 C 26.03125 13.203125 25.511719 12.992188 24.96875 13 Z"/></svg></div>
+          <div className="filter-text">Filter by Tech</div><div className="filter-count">{activeFilterList.length > 0 && `${activeFilterList.length} filter${activeFilterList.length > 1 ? "s" : ""} active`}</div>
+        </div>
         <div className={`filter-box-dropdown ${isFilterBoxOpen && "visible"}`}>
           <ul className="filter-list-inactive tech-stack">
             {inactiveFilterList.map(([name, value], i) => {
@@ -108,7 +112,7 @@ const PortfolioPage = (props) => {
               </div>
               <div className="screen">
                 { project.sample.type === "video" && <iframe className="proj-screenshot" width="560" height="315" src={project.sample.src} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>}
-                { project.sample.type === "image" && <img src={IMAGE_URL_PREFIX + project.sample.src} className="proj-screenshot" />}
+                { project.sample.type === "image" && <Image imgSrc={IMAGE_URL_PREFIX + project.sample.src} divClass="proj-screenshot" />}
               </div>
             </div>
             <h3>Tech Used:</h3>

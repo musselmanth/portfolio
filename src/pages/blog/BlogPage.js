@@ -1,5 +1,6 @@
 import useFetch from '../../hooks/useFetch';
 import './BlogPage.css';
+import Image from '../../components/Image'
 
 const DEV_TO_URL = 'https://dev.to/api/articles?username=musselmanth'
 
@@ -16,7 +17,7 @@ const BlogPage = (props) => {
         { apiData !== null && apiData.map((post, i) => {
           return (
             <a className="post" href={post.url} key={`post-${i}`}>
-              <img src={post.social_image} className="post-image" />
+              <Image imgSrc={post.social_image} divClassName="post-image" />
               <div className="post-body">
                 <h2 className="post-title">{post.title}</h2>
                   <div className="tags-container">
