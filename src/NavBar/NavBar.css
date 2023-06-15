@@ -272,7 +272,7 @@
     height: calc(100dvh - 65px);
     margin-top: 65px;
     transition: all 0.3s ease-out;
-    overflow:scroll;
+    overflow-y: auto;
     visibility: hidden;
   }
 
